@@ -4,6 +4,7 @@ import (
 	"reflect"
 )
 
+// TODO: - 创建一个集合
 func NewSet(elementGroup ...interface{}) *RSet {
 
 	returnSet := []map[string]interface{}{}

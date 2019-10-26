@@ -10,6 +10,7 @@ func main() {
 	rset := collection.NewSet(test_data.StudentsGood, test_data.StudentsBad)
 	fmt.Println(rset.Set)
 
+	// 集合按照排序字段顺次降级排序
 	printSet(rset)
 	fmt.Println("---------------")
 	rset.SortDescDowngradeBy("Id")
