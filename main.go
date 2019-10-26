@@ -7,16 +7,15 @@ import (
 )
 
 func main() {
+	// 新建一个RSet
 	rset := collection.NewSet(test_data.StudentsGood, test_data.StudentsBad)
-	fmt.Println(rset.Set)
 
-	// 集合按照排序字段顺次降级排序
 	printSet(rset)
 	fmt.Println("---------------")
-	rset.SortDescDowngradeBy("Id")
+	rset.SortDescDowngradeBy("Id") // 集合按照排序字段顺次降级排序
 	printSet(rset)
 	fmt.Println("---------------")
-	rset.SortAscDowngradeBy("Id")
+	rset.SortAscDowngradeBy("Id") // 集合按照排序字段顺次升级排序
 	printSet(rset)
 
 }

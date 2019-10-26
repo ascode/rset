@@ -1,1 +1,27 @@
 # rset
+
+#### 使用
+
+```$xslt
+
+func main() {
+	// 新建一个RSet
+	rset := collection.NewSet(test_data.StudentsGood, test_data.StudentsBad)
+
+	printSet(rset)
+	fmt.Println("---------------")
+	rset.SortDescDowngradeBy("Id") // 集合按照排序字段顺次降级排序
+	printSet(rset)
+	fmt.Println("---------------")
+	rset.SortAscDowngradeBy("Id") // 集合按照排序字段顺次升级排序
+	printSet(rset)
+
+}
+
+func printSet(rset *collection.RSet) {
+	for _, obj := range rset.Set {
+		fmt.Printf("%d,%s,%d,%-v\n", obj["Id"], obj["Name"], obj["Age"], obj["IsNewbie"])
+	}
+}
+
+```
