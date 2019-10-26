@@ -12,7 +12,11 @@ func (s RSet)SortAscBy(fields ...string) *RSet {
 	sort.Slice(theSet.Set, func(i, j int) bool {
 		switch theSet.Set[i][fields[0]].(type) {
 		case int64:
-			return  theSet.Set[i][fields[0]].(int64) < theSet.Set[j][fields[0]].(int64)
+			if theSet.Set[i][fields[0]].(int64) == theSet.Set[j][fields[0]].(int64) {
+				return true
+			}else {
+				return  theSet.Set[i][fields[0]].(int64) < theSet.Set[j][fields[0]].(int64)
+			}
 		case string:
 			return true
 		default:
@@ -29,7 +33,11 @@ func (s RSet)SortDescBy(fields ...string) *RSet {
 	sort.Slice(theSet.Set, func(i, j int) bool {
 		switch reflect.ValueOf(theSet.Set[i][fields[0]]).Interface().(type) {
 		case int64:
-			return  theSet.Set[i][fields[0]].(int64) > theSet.Set[j][fields[0]].(int64)
+			if theSet.Set[i][fields[0]].(int64) == theSet.Set[j][fields[0]].(int64) {
+				return true
+			}else {
+				return  theSet.Set[i][fields[0]].(int64) > theSet.Set[j][fields[0]].(int64)
+			}
 		case string:
 			return true
 		default:
