@@ -1,17 +1,27 @@
-package rset
+package main
 
 import (
-	//"github.com/ascode/rset/collection"
-	//"github.com/ascode/rset/test_data"
 	"fmt"
-	//"github.com/ascode/rset/collection"
-	//"github.com/ascode/rset/test_data"
-	//_ "github.com/ascode/rset/test_data"
+	"github.com/ascode/rset/collection"
+	"github.com/ascode/rset/test_data"
 )
 
 func main() {
-	//collection.NewSet(test_data.Students)
-	//collection
-	fmt.Println("a")
+	rset := collection.NewSet(test_data.StudentsGood, test_data.StudentsBad)
+	fmt.Println(rset.Set)
 
+	printSet(rset)
+	fmt.Println("---------------")
+	rset.SortDescBy("Id")
+	printSet(rset)
+	fmt.Println("---------------")
+	rset.SortAscBy("Id")
+	printSet(rset)
+
+}
+
+func printSet(rset *collection.RSet) {
+	for _, obj := range rset.Set {
+		fmt.Printf("%d,%s,%d,%-v\n", obj["Id"], obj["Name"], obj["Age"], obj["IsNewbie"])
+	}
 }

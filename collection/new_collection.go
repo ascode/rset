@@ -1,23 +1,27 @@
 package collection
 
 import (
-	"fmt"
 	"reflect"
 )
 
-func NewSet(elements ...[]*interface{}) *RSet {
-	//returnSet := []interface{}{}
-	for _, element := range elements  {
-		//returnSet = append(returnSet, element)
-		for _, item := range element {
-			getType := reflect.TypeOf(item)
-			for i := 0; i < getType.NumField(); i ++ {
-				fmt.Println(getType.Field(i).Name)
-				fmt.Println(getType.Field(i).Type)
+func NewSet(elementGroup ...interface{}) *RSet {
+
+	returnSet := []map[string]interface{}{}
+
+	for _, elements := range elementGroup {
+		for i := 0; i < reflect.ValueOf(elements).Len(); i ++ {
+			getType := reflect.TypeOf(elements).Elem()
+			set := map[string]interface{}{}
+			for j := 0; j < getType.NumField(); j ++ {
+				set[getType.Field(j).Name] = reflect.ValueOf(elements).Index(i).Field(j).Interface()
 			}
+			returnSet = append(returnSet, set)
 		}
 	}
-	return nil
+
+	return &RSet{
+		Set:returnSet,
+	}
 }
 
 func Abc(){
