@@ -5,7 +5,7 @@ import (
 	"reflect"
 )
 
-func NewSet(elements ...[]interface{}) *RSet {
+func NewSet(elements ...[]*interface{}) *RSet {
 	//returnSet := []interface{}{}
 	for _, element := range elements  {
 		//returnSet = append(returnSet, element)
