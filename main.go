@@ -12,10 +12,10 @@ func main() {
 
 	printSet(rset)
 	fmt.Println("---------------")
-	rset.SortDescBy("Id")
+	rset.SortDescDowngradeBy("Id")
 	printSet(rset)
 	fmt.Println("---------------")
-	rset.SortAscBy("Id")
+	rset.SortAscDowngradeBy("Id")
 	printSet(rset)
 
 }
