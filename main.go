@@ -19,8 +19,12 @@ func main() {
 	rset.SortAscDowngradeBy("Id") 	// 集合按照排序字段顺次升级排序
 	printSet(rset)
 
-	rset.Skip(1).Limit(2) 			// 留下第1个开始连续2个元素
+	fmt.Println("")
+	fmt.Println("------------------------------")
 
+
+	s := rset.Skip(1).Limit(2) // 留下第1个开始连续2个元素
+	printSet(&s)
 }
 
 func printSet(rset *collection.RSet) {
