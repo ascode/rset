@@ -19,3 +19,7 @@ func NewSet(elements ...[]*interface{}) *RSet {
 	}
 	return nil
 }
+
+func Abc(){
+
+}
