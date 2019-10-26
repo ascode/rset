@@ -5,16 +5,19 @@
 ```$xslt
 
 func main() {
+	
 	// 新建一个RSet
 	rset := collection.NewSet(test_data.StudentsGood, test_data.StudentsBad)
 
 	printSet(rset)
 	fmt.Println("---------------")
-	rset.SortDescDowngradeBy("Id") // 集合按照排序字段顺次降级排序
+	rset.SortDescDowngradeBy("Id") 	// 集合按照排序字段顺次降级排序
 	printSet(rset)
 	fmt.Println("---------------")
-	rset.SortAscDowngradeBy("Id") // 集合按照排序字段顺次升级排序
+	rset.SortAscDowngradeBy("Id") 	// 集合按照排序字段顺次升级排序
 	printSet(rset)
+
+	rset.Skip(1).Limit(2) 			// 留下第1个开始连续2个元素
 
 }
 
@@ -23,5 +26,6 @@ func printSet(rset *collection.RSet) {
 		fmt.Printf("%d,%s,%d,%-v\n", obj["Id"], obj["Name"], obj["Age"], obj["IsNewbie"])
 	}
 }
+
 
 ```
