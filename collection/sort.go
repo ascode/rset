@@ -13,12 +13,14 @@ func (s RSet)SortAscDowngradeBy(fields ...string) *RSet {
 	theSet := &s
 
 	sort.Slice(theSet.Set, func(i, j int) bool {
-		switch theSet.Set[i][fields[0]].(type) {
+		ei0 := theSet.Set[i][fields[0]]
+		ej0 := theSet.Set[j][fields[0]]
+		switch ei0.(type) {
 		case int64:
-			if theSet.Set[i][fields[0]].(int64) == theSet.Set[j][fields[0]].(int64) {
+			if ei0.(int64) == ej0.(int64) {
 				return true
 			}else {
-				return  theSet.Set[i][fields[0]].(int64) < theSet.Set[j][fields[0]].(int64)
+				return  ei0.(int64) < ej0.(int64)
 			}
 		case string:
 			return true
@@ -37,12 +39,14 @@ func (s RSet)SortDescDowngradeBy(fields ...string) *RSet {
 	theSet := &s
 
 	sort.Slice(theSet.Set, func(i, j int) bool {
-		switch reflect.ValueOf(theSet.Set[i][fields[0]]).Interface().(type) {
+		ei0 := theSet.Set[i][fields[0]]
+		ej0 := theSet.Set[j][fields[0]]
+		switch reflect.ValueOf(ei0).Interface().(type) {
 		case int64:
-			if theSet.Set[i][fields[0]].(int64) == theSet.Set[j][fields[0]].(int64) {
+			if ei0.(int64) == ej0.(int64) {
 				return true
 			}else {
-				return  theSet.Set[i][fields[0]].(int64) > theSet.Set[j][fields[0]].(int64)
+				return  ei0.(int64) > ej0.(int64)
 			}
 		case string:
 			return true
