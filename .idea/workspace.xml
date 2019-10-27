@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f7e06bd-7c08-4cb0-a9b6-e295b7217ef3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/VERSION" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/Minus.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/Minus.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/add.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/add.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/complement.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/complement.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/duplicate.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/duplicate.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/intersect.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/intersect.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/new_collection.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/new_collection.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/paginator.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/paginator.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/remove.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/remove.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/rset.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/rset.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/sort.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/sort.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/collection/union.go" beforeDir="false" afterPath="$PROJECT_DIR$/collection/union.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,11 +22,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/VERSION">
           <provider selected="true" editor-type-id="text-editor">
             <state>
               <caret column="5" selection-start-column="5" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Makefile">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -98,15 +95,6 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/collection/rset.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/collection/paginator.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="225">
@@ -155,6 +143,7 @@
         <option value="$PROJECT_DIR$/collection/complement.go" />
         <option value="$PROJECT_DIR$/collection/new_collection.go" />
         <option value="$PROJECT_DIR$/VERSION" />
+        <option value="$PROJECT_DIR$/Makefile" />
       </list>
     </option>
   </component>
@@ -423,6 +412,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Makefile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
