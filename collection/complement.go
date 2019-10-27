@@ -9,5 +9,6 @@ func (s RSet) Complement(fullSet []interface{}) {
 
 // TODO: - 和原始集合的集合补
 func (s RSet) MinusComplement(c []interface{}) {
-
+	s.Lock()
+	defer s.Unlock()
 }
