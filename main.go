@@ -34,7 +34,7 @@ func main() {
 		Age:0,
 		IsNewbie:true,
 	}
-	rset.Add(std1)	// 添加一个元素
+	rset.Add(std1)	 // 添加一个元素
 	printSet(rset)
 }
 
