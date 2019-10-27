@@ -7,6 +7,8 @@ import (
 
 // 按照给定的多个字段顺次降低优先级升序排序
 func (s RSet)SortAscDowngradeBy(fields ...string) *RSet {
+	s.Lock()
+	defer s.Unlock()
 
 	theSet := &s
 
@@ -29,6 +31,8 @@ func (s RSet)SortAscDowngradeBy(fields ...string) *RSet {
 
 // 按照给定的多个字段顺次降低优先级降序排序
 func (s RSet)SortDescDowngradeBy(fields ...string) *RSet {
+	s.Lock()
+	s.Unlock()
 
 	theSet := &s
 
@@ -51,6 +55,9 @@ func (s RSet)SortDescDowngradeBy(fields ...string) *RSet {
 
 // 按照给定的多个字段竞争升序排序
 func (s RSet)SortAscVieBy(fields ...string) *RSet {
+	s.Lock()
+	s.Unlock()
+
 	theSet := &s
 
 	sort.Slice(theSet.Set, func(i, j int) bool {
@@ -79,6 +86,9 @@ func (s RSet)SortAscVieBy(fields ...string) *RSet {
 
 // 按照给定的多个字段竞争降序排序
 func (s RSet)SortDescVieBy(fields ...string) *RSet {
+	s.Lock()
+	s.Unlock()
+
 	theSet := &s
 
 	sort.Slice(theSet.Set, func(i, j int) bool {

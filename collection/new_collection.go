@@ -4,7 +4,8 @@ import (
 	"reflect"
 )
 
-// TODO: - 创建一个集合
+
+// 创建一个RSet集合
 func NewSet(elementGroup ...interface{}) *RSet {
 
 	returnSet := []map[string]interface{}{}
@@ -25,6 +26,9 @@ func NewSet(elementGroup ...interface{}) *RSet {
 	}
 }
 
-func Abc(){
-
+// 创建一个复杂的RSet集合
+func NewComplexSet(elementGroup ...interface{}) *RSet{
+	s := NewSet(elementGroup)
+	s.OriginSet = Duplicate(*s).Set
+	return s
 }

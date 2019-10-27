@@ -13,3 +13,15 @@ func (s RSet) Duplicate() *RSet {
 	}
 	return cp
 }
+
+func Duplicate(s RSet) *RSet {
+	s.Lock()
+	defer s.Unlock()
+	cp := &RSet{
+		Set: []map[string]interface{}{},
+	}
+	for _, e := range s.Set {
+		cp.Set = append(cp.Set, e)
+	}
+	return cp
+}

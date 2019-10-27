@@ -8,3 +8,9 @@ func (s RSet) Union(c []interface{}) {
 
 
 }
+
+
+// TODO: - 和原始集合的集合并
+func (s RSet) MinusUnion(c []interface{}) {
+
+}
